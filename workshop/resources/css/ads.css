@@ -1,0 +1,77 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 10px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .add-post-btn {
+    display: none;
+    padding: 8px 16px;
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .logged-in .add-post-btn {
+    display: inline-block;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .logo a {
+      font-size: 20px;
+    }
+    .login-btn, .add-post-btn {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+
+  .form-inline .input-group {
+    width: 75%;
+    border: none;
+}
+
+.form-inline .input-group .input-group-text {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-right: 5px;
+}
+
+.form-inline .input-group .form-control {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.form-inline .input-group .form-control:focus {
+    border-color: #ddd;
+    box-shadow: none;
+}
