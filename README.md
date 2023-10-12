@@ -65,3 +65,40 @@ To stock your ads in database, you'll need to create a Model. In this Model, add
 
 > [This](https://laravel.com/docs/10.x/eloquent#generating-model-classes) may help <br>
 > Other way to do this [here](https://laravel.com/docs/10.x/migrations#generating-migrations)
+<br>
+> Don't forget to apply migration
+
+### Controller creation
+
+To display your page, you need to use a controller. It will also allows you to get ads from database before displaying your page.
+<br>
+Create an index function. It will get ads from out database then return the associated html page
+
+> See the [documentation](https://laravel.com/docs/10.x/controllers)
+
+### Route creation
+
+In the routes/web.php file, create a /ads route.
+<br>
+It is a GET method. Add to this route a middleware that check if user is authentificated. Add a 'ads' as name of the route.
+<br>
+In app/Providers/RouteServiceProvider.php, replace the value of const HOME variable by '/ads'.
+
+> Checking the [documentation](https://laravel.com/docs/10.x/routing) may help again.
+
+### View creation
+
+Create your view in resources/views. Inside it you need:
+<br>
+* Display your ads
+* Button that allows user to add an new ad
+* Form to filter displayed ads
+* Searchbar
+<br>
+> Be careful, css and js files must be placed in public directory.
+<br>
+You have now completed your first page !
+
+## Step 5: Other functionnalities
+
+In the former step we had a searchbar, form, etc... Implement these functionnalities.
